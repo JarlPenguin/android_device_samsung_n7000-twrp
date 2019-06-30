@@ -63,3 +63,9 @@ TW_EXCLUDE_SUPERSU := true
 
 # Encryption support
 TW_INCLUDE_CRYPTO := true
+
+# Specific FSTABs
+ifeq (los16-emu,$(TW_FSTAB))
+TW_DEVICE_VERSION := 1
+TARGET_RECOVERY_FSTAB := $(DEVICE_TREE)/recovery-los16-emu.fstab
+endif
